@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo App</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-app="Silly101">
+
+<div ng-controller="TodosController">
+	<h1>{{name}}</h1>
+
+	<ul ng-repeat="todo in todos">
+		<li>{{todo.name}}</li>
+	</ul>
+
+	<input type="text" placeholder="Todo Name" ng-model="todoName">
+	<button type="button" ng-click="addTodo()">Submit</button>
+</div>
+
+</body>
+</html>
